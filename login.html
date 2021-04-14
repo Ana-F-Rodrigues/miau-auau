@@ -8,7 +8,27 @@
     <title>Controle de Acesso</title>
 
     <link rel="stylesheet" href="css/style.css">
+	
+		<SCRIPT type="text/javascript" src="jquery-3.6.0.js"></SCRIPT>
+			<SCRIPT type="text/javascript">
+			
+			$(document).ready(function(){
+				$(".card-group").focus(function(){
+						$("#email").css("");
+				});
+				$(".card-group").focus(function(){
+						$("#senha").css("");
+				});
+				
+				$("botao").click(function(){
+						acessar();
+				});
+			});
+			
+				
+			</SCRIPT>
 </head>
+
 
 <body>
     <form class="form" action="https://henriqueyudy.github.io/projetomiau/index">
@@ -22,12 +42,12 @@
 
             <div class="card-group">
                 <label>Email</label>
-                <input type="email" name="email" placeholder="Digite seu Email" required>
+                <input id="email" type="email" name="email" placeholder="Digite seu Email" required>
             </div>
 
             <div class="card-group">
                 <label>Senha</label>
-                <input type="password" name="senha" placeholder="Digite sua senha" required>
+                <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required>
             </div>
 
             <div class="card-group">
@@ -36,7 +56,7 @@
             </div>
 
             <div class="card-group btn">
-                <button type="submit">ACESSAR</button>
+                <button id="botao" type="submit" value="acessar">ACESSAR</button>
             </div>
 
         </div>
